@@ -52,8 +52,9 @@ async function loadStarWars() {
 // set event listeners 
 selectEl.addEventListener('change', async(event) => {
     const selected = event.target.value;
-
+    list.classList.remove('star-wars', 'pokemon');
     if (selected === 'none') {
+        list.innerHTML = '';
         const p = document.createElement('p');
 
         p.textContent = 'please select an API';
