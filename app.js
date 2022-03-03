@@ -1,21 +1,28 @@
 
 // import functions
-
 import { getPokedex } from './fetch-utils.js';
 
 // grab DOM elements
 const template = document.querySelector('#template');
 const selectEl = document.querySelector('select');
 const list = document.querySelector('#list');
+<<<<<<< HEAD
 const errorElement = document.querySelector('#error-message');
+=======
+>>>>>>> ebde882766946b3d1e21eb192ba45b07bd27a0c2
 
 async function loadPokedex() {
     const pokedex = await getPokedex();
 
     list.classList.add('pokemon');
 
+<<<<<<< HEAD
     for (let pokemon of pokedex) {
         const clone = template.content.cloneNode(true);
+=======
+    for(let pokemon of pokedex) {
+        const clone = template.textContent.cloneNode(true);
+>>>>>>> ebde882766946b3d1e21eb192ba45b07bd27a0c2
 
         const name = clone.querySelector('h2');
         const image = clone.querySelector('img');
