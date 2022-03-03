@@ -12,28 +12,29 @@
     </head>
 
     <body>
-        <header>
-            <h1>APIs are fun!</h1>
-        </header>
-
-        <main>
-            <select name="api" id="api">
-                <option value="none">Please select API</option>
-                <option value="none">Star Wars</option>
-                <option value="none">Pokemon</option>
-            </select>
-            <ul id="list">
-                
-            </ul>
+        <body>
+            <header>
+                <h1>APIs are fun</h1>
+            </header>
             <template id="template">
                 <h2></h2>
                 <h6></h6>
-                <img src="" alt=""/>
+                <img src="" alt="" />
             </template>
-        </main>
-
-        <footer>&copy; 2021 Aspiring Software Developer</footer>
-
-        <script type="module" src="./app.js"></script>
-    </body>
+    
+            <main>
+                <select name="api" id="api">
+                    <option value="none">Please Select an API</option>
+                    <option value="star-wars">Star Wars</option>
+                    <option value="pokemon">Pokemon</option>
+                </select>
+                <div id="error-message"></div>
+    
+                <ul id="list"></ul>
+            </main>
+    
+            <footer>&copy; 2021 Aspiring Software Developer</footer>
+    
+            <script type="module" src="./app.js"></script>
+        </body>
 </html>

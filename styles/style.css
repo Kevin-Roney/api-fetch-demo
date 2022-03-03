@@ -3,7 +3,7 @@
 body {
     /* feel free to update these css variables for a quick theme */
 
-    --color1: white;
+    --color1: rgb(255, 255, 255);
     --color2: white;
     --color3: white;
     --color4: white;
@@ -38,6 +38,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    background-color: rgb(255, 255, 0);
 }
 
 section {
