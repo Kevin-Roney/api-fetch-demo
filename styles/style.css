@@ -38,7 +38,6 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
-    background-color: rgb(255, 255, 0);
 }
 
 section {
@@ -88,4 +87,11 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+.pokemon {
+    background-color: yellow;
+}
+.star-wars {
+    background-color: black;
+    color: rgb(253, 236, 0);
 }
