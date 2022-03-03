@@ -1,28 +1,21 @@
 
 // import functions
-import { getPokedex } from './fetch-utils.js';
+import { getPokedex, getStarWarsPeople } from './fetch-utils.js';
+
 
 // grab DOM elements
 const template = document.querySelector('#template');
 const selectEl = document.querySelector('select');
 const list = document.querySelector('#list');
-<<<<<<< HEAD
 const errorElement = document.querySelector('#error-message');
-=======
->>>>>>> ebde882766946b3d1e21eb192ba45b07bd27a0c2
 
 async function loadPokedex() {
     const pokedex = await getPokedex();
 
     list.classList.add('pokemon');
 
-<<<<<<< HEAD
     for (let pokemon of pokedex) {
         const clone = template.content.cloneNode(true);
-=======
-    for(let pokemon of pokedex) {
-        const clone = template.textContent.cloneNode(true);
->>>>>>> ebde882766946b3d1e21eb192ba45b07bd27a0c2
 
         const name = clone.querySelector('h2');
         const image = clone.querySelector('img');
@@ -34,6 +27,24 @@ async function loadPokedex() {
 
         image.src = pokemon.url_image;
         image.alt = pokemon.pokemon;
+
+        list.appendChild(clone);
+    }
+}
+async function loadStarWars() {
+    const starWars = await getStarWarsPeople();
+
+    list.classList.add('star-wars');
+
+    for (let person of starWars) {
+        const clone = template.content.cloneNode(true);
+
+        const name = clone.querySelector('h2');
+        const type = clone.querySelector('h6');
+
+        name.textContent = 'Name: ' + person.name;
+
+        type.textContent = 'Hair color: ' + person.hair_color;
 
         list.appendChild(clone);
     }
@@ -55,5 +66,9 @@ selectEl.addEventListener('change', async(event) => {
         await loadPokedex();
     } else if (selected === 'star-wars') {
     //TODO add star wars
+        list.innerHTML = '';
+        errorElement.innerHTML = '';
+
+        await loadStarWars();
     }
 });
