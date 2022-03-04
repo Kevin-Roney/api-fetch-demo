@@ -3,7 +3,7 @@
 body {
     /* feel free to update these css variables for a quick theme */
 
-    --color1: white;
+    --color1: rgb(255, 255, 255);
     --color2: white;
     --color3: white;
     --color4: white;
@@ -87,4 +87,14 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+
+
+.pokemon {
+    background-color: yellow;
+    color: blue;
+}
+.star-wars {
+    background-color: black;
+    color: rgb(253, 236, 0);
 }
